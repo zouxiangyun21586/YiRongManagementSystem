@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/theme.css">
     <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
 
+	<script src="../lib/bootstrap/js/bootstrap.js"></script>
     <script src="../lib/jquery-1.8.1.min.js" type="text/javascript"></script>
 
     <!-- Demo page code -->
@@ -63,7 +64,7 @@
                     </li>
                     
                 </ul>
-                <a class="brand" href="/view/index.jsp"><span class="first">Your</span> <span class="second">Company</span></a>
+                <a class="brand" href="/view/exhibition.jsp"><span class="first">School </span> <span class="second">information</span></a>
             </div>
         </div>
     </div>
@@ -192,18 +193,13 @@
 			        <button class="btn btn-danger" data-dismiss="modal">Delete</button>
 			    </div>
 			</div>
-	
+		   </div>
 		</div>
     </div>
     <footer>
-        <hr>
-        
-        <p class="pull-right">Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
-        <p>&copy; 2012 <a href="#">Portnine</a></p>
+		<p class="pull-right">Collect from <a href="http://www.11467.com/qiye/45122272.htm" title="一容软件" target="_blank">一容软件</a></p>
+        <p>&copy; 2018 <a href="https://baike.baidu.com/item/%E6%B7%B1%E5%9C%B3/140588?fr=aladdin">Shenzhen</a></p>        
     </footer>
-    
-    <script src="../lib/bootstrap/js/bootstrap.js"></script>
-
   </body>
   <script type="text/javascript">
 	$(document).ready(function(){ // 页面加载完成后出现

@@ -20,15 +20,13 @@ public class YiRongTeacherController {
 
     @RequestMapping("/indexTeacher")
 	public String indexPage(ModelMap map) {
-		List<Teacher> teacher = yiRongTeacherService.query(1, 5);
-		map.put("teacherList", teacher);
-		return "HeadPage2";
+		return "exhibition";
 	}
     
     @ResponseBody
     @RequestMapping(value = "/teacher", method = RequestMethod.GET)
 	public List<Teacher> query(ModelMap map) {
-		return yiRongTeacherService.query(1, 5);
+		return yiRongTeacherService.query(0, 7);
 	}
     
     @ResponseBody
