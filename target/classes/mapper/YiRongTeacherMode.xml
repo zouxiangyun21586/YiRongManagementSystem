@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yr.mapper.YiRongTeacherModel"> <!-- 接口路径 -->
+
+	<!-- 查询多个结果，返回resultMap -->
+	<resultMap type="teacher" id="queryTeacher">
+		<id property="teaId" column="teaId"></id>
+		<result property="teaSex" column="teaSex" />
+		<result property="teaName" column="teaName" />
+		<result property="teaTell" column="teaTell" />
+		<result property="teaGrade" column="teaGrade" />
+	</resultMap>
+	
+	<select id="query" resultMap="queryTeacher">
+		select * from teacher
+	</select>
+
+	<insert id="inster" parameterType="teacher">
+		insert into teacher(teaSex, teaName, teaTell, teaGrade) 
+			values(#{teaSex}, #{teaName}, #{teaTell}, #{teaGrade})
+	</insert>
+	
+	<delete id="remove" parameterType="java.lang.Integer">
+		delete from teacher
+		<where>
+			teaId = #{teaId}
+		</where>
+	</delete>
+	
+	<update id="modify" parameterType="teacher">
+		update teacher
+		<set>
+			 teaSex = #{teaSex}, teaName = #{teaName}, teaTell = #{teaTell}, teaGrade = #{teaGrade}
+		</set>
+		<where>
+			teaId = #{teaId}
+		</where>
+	</update>
+	
+	<!-- 条件查询	id:接口方法	parameterType:参数类型	resultType:返回类型 -->
+	<select id="EchoDisplay" parameterType="java.lang.Integer" resultType="teacher">
+		select * from teacher
+		<where>
+			teaId = #{teaId}
+		</where>
+	</select>
+
+</mapper>
