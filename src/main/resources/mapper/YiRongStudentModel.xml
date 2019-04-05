@@ -13,6 +13,16 @@
 		<result property="admissionTime" column="admissionTime" />
 		<result property="graduationTime" column="graduationTime" />
 	</resultMap>
+
+	<resultMap type="page" id="pageObject">
+		<result property="everyPage" column="everyPage" />
+		<result property="totalCount"  column="totalCount" />
+		<result property="totalPage"  column="totalPage" />
+		<result property="currentPage"  column="currentPage" />
+		<result property="beginIndex"  column="beginIndex" />
+		<result property="hasPrePage"  column="hasPrePage" />
+		<result property="hasNextPage"  column="hasNextPage" />
+	</resultMap>
 	
 	<select id="query" resultMap="queryStudent">
 		select * from student
@@ -49,11 +59,11 @@
 		</where>
 	</select>
 
-	<select id="getCont" parameterType="java.lang.Integer">
+	<select id="getCont" resultType="java.lang.Integer">
     	select count(*) as count from student
     </select>
     
-    <select id="studentPage" parameterType="java.lang.Integer">
+    <select id="studentPage" parameterType="page" resultType="student">
     	select * from student limit #{currentPage} , #{everyPage}
     </select>
 

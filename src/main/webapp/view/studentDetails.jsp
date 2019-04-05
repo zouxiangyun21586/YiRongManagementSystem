@@ -5,7 +5,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap Admin</title>
+    <title>学生详情</title>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -17,6 +17,7 @@
 
 	<script src="../lib/bootstrap/js/bootstrap.js"></script>
     <script src="../lib/jquery-1.8.1.min.js" type="text/javascript"></script>
+
     <!-- Demo page code -->
     <style type="text/css">
         #line-chart {
@@ -36,7 +37,6 @@
         }
     </style>
 
-    <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../assets/ico/apple-touch-icon-114-precomposed.png">
@@ -92,23 +92,68 @@
 						<li ><a href="*">教师详情</a></li>
 					</ul>
 				</div>
-        	</div>
-        	<div class="span9">
-	            <h1 class="page-title">编辑学生信息</h1>
-				<div class="btn-toolbar">
-				    <button class="btn btn-primary"><i class="icon-save"></i> 保存</button>
-				    <a href="#myModal" data-toggle="modal" class="btn">删除</a>
-					<div class="btn-group">
-					</div>
+	       	</div>
+        <div class="span9">
+            <h1 class="page-title">Users</h1>
+			<div class="btn-toolbar">
+			    <button class="btn btn-primary"><i class="icon-plus"></i><a href="#addModal" data-toggle="modal"> 添加学生</a></button>
+			    <button class="btn">导入</button>
+			    <button class="btn">导出</button>
+				<div class="btn-group">
 				</div>
-				<div class="well">
-				    <ul class="nav nav-tabs">
-				      <li class="active"><a href="#home" data-toggle="tab">Profile</a></li>
-				      <li><a href="#profile" data-toggle="tab">Password</a></li>
-				    </ul>
-				    <div id="myTabContent" class="tab-content">
-				      <div class="tab-pane active in" id="home">
-				    <form id="tab">
+			</div>
+			<div class="well">
+			    <table class="table">
+			      <thead>
+			        <tr>
+				        <th>编号</th>
+						<th>姓名</th>
+						<th>性别</th>
+						<th>电话</th>
+						<th>住址</th>
+						<th>状态</th>
+						<th>任课老师</th>
+						<th>监护人</th>
+						<th>监护人电话</th>
+						<th>入学时间</th>
+						<th>毕业时间</th>
+			          <th style="width: 26px;"></th>
+			        </tr>
+			      </thead>
+				  <tbody id="linkStudentMessage"></tbody>
+			    </table>
+			</div>
+			<div class="pagination">
+				<div id="pageLink">
+			    <!-- <ul> -->
+			        <!-- <li><a href="#">Prev</a></li>
+			        <li><a href="#">1</a></li>
+			        <li><a href="#">2</a></li>
+			        <li><a href="#">Next</a></li> -->
+			    <!-- </ul> -->
+			</div>
+	
+			<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			    <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+			        <h3 id="myModalLabel">Delete Confirmation</h3>
+			    </div>
+			    <div class="modal-body">
+			        <p class="error-text"><i class="icon-warning-sign modal-icon"></i>Are you sure you want to delete the user?</p>
+			    </div>
+			    <div class="modal-footer">
+			        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+			        <button class="btn btn-danger" data-dismiss="modal">Delete</button>
+			    </div>
+			</div>
+			
+			<div class="modal small hide fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+			    <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+			        <h3 id="addModalLabel">学生信息添加</h3>
+			    </div>
+			    <div class="modal-body">
+			        <form id="tab">
 				        <label>Username</label>
 				        <input type="text" value="jsmith" class="input-xlarge">
 				        <label>First Name</label>
@@ -125,76 +170,139 @@
 				        </textarea>
 				        <label>Time Zone</label>
 				        <select name="DropDownTimezone" id="DropDownTimezone" class="input-xlarge">
-				          <option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
-				          <option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
-				          <option value="-10.0">(GMT -10:00) Hawaii</option>
-				          <option value="-9.0">(GMT -9:00) Alaska</option>
-				          <option selected="selected" value="-8.0">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
-				          <option value="-7.0">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
-				          <option value="-6.0">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
-				          <option value="-5.0">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
-				          <option value="-4.0">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
-				          <option value="-3.5">(GMT -3:30) Newfoundland</option>
-				          <option value="-3.0">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
-				          <option value="-2.0">(GMT -2:00) Mid-Atlantic</option>
-				          <option value="-1.0">(GMT -1:00 hour) Azores, Cape Verde Islands</option>
-				          <option value="0.0">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
-				          <option value="1.0">(GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris</option>
-				          <option value="2.0">(GMT +2:00) Kaliningrad, South Africa</option>
-				          <option value="3.0">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
-				          <option value="3.5">(GMT +3:30) Tehran</option>
-				          <option value="4.0">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
-				          <option value="4.5">(GMT +4:30) Kabul</option>
-				          <option value="5.0">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
-				          <option value="5.5">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
-				          <option value="5.75">(GMT +5:45) Kathmandu</option>
-				          <option value="6.0">(GMT +6:00) Almaty, Dhaka, Colombo</option>
-				          <option value="7.0">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
-				          <option value="8.0">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
-				          <option value="9.0">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
-				          <option value="9.5">(GMT +9:30) Adelaide, Darwin</option>
-				          <option value="10.0">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
-				          <option value="11.0">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
-				          <option value="12.0">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
-				    </select>
-				    </form>
-				      </div>
-				      <div class="tab-pane fade" id="profile">
-				    <form id="tab2">
-				        <label>New Password</label>
-				        <input type="password" class="input-xlarge">
-				        <div>
-				            <button class="btn btn-primary">Update</button>
-				        </div>
-				    </form>
-				      </div>
-				  </div>
-				</div>
+					          <option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
+					          <option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
+						</select>
+					</form>
+			    </div>
+			    <div class="modal-footer">
+			        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+			        <button class="btn btn-danger" data-dismiss="modal">Delete</button>
+			    </div>
 			</div>
-
-			<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			  <div class="modal-header">
-			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Ã</button>
-			    <h3 id="myModalLabel">Delete Confirmation</h3>
-			  </div>
-			  <div class="modal-body">
-			    
-			    <p class="error-text"><i class="icon-warning-sign modal-icon"></i>Are you sure you want to delete the user?</p>
-			  </div>
-			  <div class="modal-footer">
-			    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-			    <button class="btn btn-danger" data-dismiss="modal">Delete</button>
-			  </div>
-			</div>
-	      </div>
-	    </div>
-    
-      <footer>
+		  </div>
+		</div>
+    </div>
+    <footer>
 		<p class="pull-right">Collect from <a href="http://www.11467.com/qiye/45122272.htm" title="一容软件" target="_blank">一容软件</a></p>
         <p>&copy; 2018 <a href="https://baike.baidu.com/item/%E6%B7%B1%E5%9C%B3/140588?fr=aladdin">Shenzhen</a></p>        
     </footer>
-    </footer>
   </body>
+  <script type="text/javascript">
+	$(document).ready(function(){ // 页面加载完成后出现
+		page();
+		queryAll();
+	});
+	
+	function queryAll() {
+		$.ajax({
+			type : "get",
+			url : '<%=request.getContextPath()%>/student',
+			dataType:"json",
+			success : function(dataObj) {
+				var html = "";
+				for(var i in dataObj){
+					if (dataObj[i].stuStatus == "0") {
+						if(dataObj[i].graduationTime == null){
+							html += "<tr><td align='center'>" + dataObj[i].stuId + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuName + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuSex + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuTell + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuAddr + "</td>"+
+							"<td  align='center'>" + "在校" + "</td>"+
+							"<td  align='center'>" + "钟林" + "</td>"+
+							"<td  align='center'>" + "***" + "</td>"+
+							"<td  align='center'>" + "12345" + "</td>"+
+							"<td  align='center'>" + dataObj[i].admissionTime + "</td>"+
+							"<td  align='center'>" + "" + "</td>"+
+							"<td  align='center'>"+
+								"<a href=\"user.jsp\"><i class=\"icon-pencil\"></i></a>"+
+								"<a href=\#myModal\ role=\button\" data-toggle=\"modal\"><i class=\"icon-remove\"></i></a>"+
+							"</td></tr>";
+						} else {
+							html += "<tr><td align='center'>" + dataObj[i].stuId + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuName + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuSex + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuTell + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuAddr + "</td>"+
+							"<td  align='center'>" + "在校" + "</td>"+
+							"<td  align='center'>" + "钟林" + "</td>"+
+							"<td  align='center'>" + "***" + "</td>"+
+							"<td  align='center'>" + "12345" + "</td>"+
+							"<td  align='center'>" + dataObj[i].admissionTime + "</td>"+
+							"<td  align='center'>" + dataObj[i].graduationTime + "</td>"+
+							"<td  align='center'>"+
+								"<a href=\"user.jsp\"><i class=\"icon-pencil\"></i></a>"+
+								"<a href=\#myModal\ role=\button\" data-toggle=\"modal\"><i class=\"icon-remove\"></i></a>"+
+							"</td></tr>";
+						}
+					} else if (dataObj[i].stuStatus == "1") {
+						if(dataObj[i].graduationTime == null){
+							html += "<tr><td align='center'>" + dataObj[i].stuId + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuName + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuSex + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuTell + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuAddr + "</td>"+
+							"<td  align='center'>" + "毕业" + "</td>"+
+							"<td  align='center'>" + "钟林" + "</td>"+
+							"<td  align='center'>" + "***" + "</td>"+
+							"<td  align='center'>" + "12345" + "</td>"+
+							"<td  align='center'>" + dataObj[i].admissionTime + "</td>"+
+							"<td  align='center'>" + "" + "</td>"+
+							"<td  align='center'>"+
+								"<a href=\"user.jsp\"><i class=\"icon-pencil\"></i></a>"+
+								"<a href=\#myModal\ role=\button\" data-toggle=\"modal\"><i class=\"icon-remove\"></i></a>"+
+							"</td></tr>";
+						} else {
+							html += "<tr><td align='center'>" + dataObj[i].stuId + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuName + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuSex + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuTell + "</td>"+
+							"<td  align='center'>" + dataObj[i].stuAddr + "</td>"+
+							"<td  align='center'>" + "毕业" + "</td>"+
+							"<td  align='center'>" + "钟林" + "</td>"+
+							"<td  align='center'>" + "***" + "</td>"+
+							"<td  align='center'>" + "12345" + "</td>"+
+							"<td  align='center'>" + dataObj[i].admissionTime + "</td>"+
+							"<td  align='center'>" + dataObj[i].graduationTime + "</td>"+
+							"<td  align='center'>"+
+								"<a href=\"user.jsp\"><i class=\"icon-pencil\"></i></a>"+
+								"<a href=\#myModal\ role=\button\" data-toggle=\"modal\"><i class=\"icon-remove\"></i></a>"+
+							"</td></tr>";
+						}
+					}
+				}
+				$('#linkStudentMessage').append(html);
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status+","+XMLHttpRequest.readyState+","+textStatus);
+            }
+		})
+	}
+	
+	function page() {
+		$.ajax({
+			type : "get",
+			url : '<%=request.getContextPath()%>/cont',
+			dataType:"json",
+			success : function(dataObj) {
+				var html = "";
+				html += "<p width='199'>当前为第${page.currentPage}页,共${page.totalPage}页</p>"+
+						"<ul><c:choose><c:when test='${page.hasPrePage}'>"+
+						"<li><a href='<%=request.getContextPath()%>/student?method=list&currentPage=1'>首页</a>"+
+						"<li><a href='<%=request.getContextPath()%>/student?method=list&currentPage=${page.currentPage - 1}'>上一页</a>"+
+						"</c:when><c:otherwise> 首页 | 上一页</c:otherwise></c:choose>"+
+						"<c:choose><c:when test='${page.hasNextPage}'>"+
+						"<li><a href='<%=request.getContextPath()%>/student?method=list&currentPage=${page.currentPage + 1}'>下一页</a>"+
+						"<li><a href='<%=request.getContextPath()%>/student?method=list&currentPage=${page.totalPage}'>尾页</a>"+
+						"</c:when><c:otherwise> 下一页 | 尾页</c:otherwise></c:choose>"
+				$('#pageLink').append(html);
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status+","+XMLHttpRequest.readyState+","+textStatus);
+            }
+		})
+	}
+	
+  </script>
 </html>
-
-

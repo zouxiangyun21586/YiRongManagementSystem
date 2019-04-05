@@ -83,7 +83,7 @@ public class YiRongStudentController {
  
     @ResponseBody // 表示返回json格式的数据
 	@RequestMapping("/cont")
-	public String cont(@RequestParam("currentPage") String scurrentPage,ModelMap mm) { // 总页数
+	public String cont(@RequestParam(value = "currentPage", required = false) String scurrentPage,ModelMap mm) { // 总页数
 		int everyPage = 5;//每页记录数
         int totalCount = yiRongStudentService.getCont();//获取总记录数
         //点击链接重新获取当前页
