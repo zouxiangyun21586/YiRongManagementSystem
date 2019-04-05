@@ -2,6 +2,7 @@ package com.yr.service;
 
 import java.util.List;
 
+import com.yr.model.Page;
 import com.yr.model.Student;
 
 /**
@@ -16,7 +17,11 @@ public interface YiRongStudentService {
 
 	public Boolean modify(Student student);
 
-	public Student EchoDisplay(int stuId);
+	public Boolean EchoDisplay(int stuId);
 
-	public List<Student> query(int currPage, int pageSize);
+	public List<Student> query();
+	
+	public int getCont();
+	
+	public List<Student> studentPage(Page page);
 }

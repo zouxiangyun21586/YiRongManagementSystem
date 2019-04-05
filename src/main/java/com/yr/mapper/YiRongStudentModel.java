@@ -2,6 +2,7 @@ package com.yr.mapper;
 
 import java.util.List;
 
+import com.yr.model.Page;
 import com.yr.model.Student;
 
 /**
@@ -19,4 +20,8 @@ public interface YiRongStudentModel {
 	public Student EchoDisplay(int stuId);
 
 	public List<Student> query();
+	
+	public int getCont();
+	
+	public List<Student> studentPage(Page page);
 }

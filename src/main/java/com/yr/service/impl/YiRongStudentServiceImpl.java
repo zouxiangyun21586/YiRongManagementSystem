@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.yr.mapper.YiRongStudentModel;
+import com.yr.model.Page;
 import com.yr.model.Student;
 import com.yr.service.YiRongStudentService;
 
@@ -53,23 +54,31 @@ public class YiRongStudentServiceImpl implements YiRongStudentService {
 	}
 
 	@Override
-	public Student EchoDisplay(int stuId) {
-		return yiRongStudentModel.EchoDisplay(stuId);
+	public Boolean EchoDisplay(int stuId) {
+		try {
+			yiRongStudentModel.EchoDisplay(stuId);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	@Override
-	public List<Student> query(int currPage, int pageSize) {
-		// 查询全部数据
-		List<Student> students = yiRongStudentModel.query();
-		// 从第几条数据开始
-		int firstIndex = (currPage - 1) * pageSize;
-		// 到第几条数据结束
-		int lastIndex = currPage * pageSize;
-		if(lastIndex >= 5){
-			return students.subList(firstIndex, lastIndex); // 直接在list中截取
-		}
-		return students;
+	public List<Student> query() {
+		return yiRongStudentModel.query();
 		
+	}
+
+	@Override
+	public int getCont() {
+		int i = yiRongStudentModel.getCont();
+		return i;
+	}
+
+	@Override
+	public List<Student> studentPage(Page page) {
+		return yiRongStudentModel.studentPage(page);
 	}
 
 }

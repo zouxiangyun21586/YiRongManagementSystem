@@ -49,4 +49,12 @@
 		</where>
 	</select>
 
+	<select id="getCont" parameterType="java.lang.Integer">
+    	select count(*) as count from student
+    </select>
+    
+    <select id="studentPage" parameterType="java.lang.Integer">
+    	select * from student limit #{currentPage} , #{everyPage}
+    </select>
+
 </mapper>
