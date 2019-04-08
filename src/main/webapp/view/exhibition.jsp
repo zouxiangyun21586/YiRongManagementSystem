@@ -107,11 +107,11 @@
 		    <div class="block">
 		        <p class="block-heading">Gallery of Things</p>
 		        <div class="block-body gallery">
-					<img src="http://placehold.it/140x140/eee" class="img-polaroid">
-					<img src="http://placehold.it/140x140/eee" class="img-polaroid">
-					<img src="http://placehold.it/140x140/eee" class="img-polaroid">
-					<img src="http://placehold.it/140x140/eee" class="img-polaroid">
-					<img src="http://placehold.it/140x140/eee" class="img-polaroid">
+					<img src="../images/X.gif" class="img-polaroid">
+					<img src="../images/X.gif" class="img-polaroid">
+					<img src="../images/X.gif" class="img-polaroid">
+					<img src="../images/X.gif" class="img-polaroid">
+					<img src="../images/X.gif" class="img-polaroid">
 		            <div class="clearfix"></div>
 		        </div>
 		    </div>
@@ -120,20 +120,20 @@
 		        <div class="block span6">
 		            <p class="block-heading">Gallery of Stuff</p>
 		            <div class="block-body gallery">
-						<img src="../images/170x170.gif" class="img-polaroid">
-						<img src="../images/170x170.gif" class="img-polaroid">
-						<img src="../images/170x170.gif" class="img-polaroid">
-						<img src="../images/170x170.gif" class="img-polaroid">
+						<img src="../images/JX.gif" class="img-polaroid">
+						<img src="../images/JX.gif" class="img-polaroid">
+						<img src="../images/JX.gif" class="img-polaroid">
+						<img src="../images/JX.gif" class="img-polaroid">
 		                <div class="clearfix"></div>
 		            </div>
 		        </div>
 		        <div class="block span6">
 		            <p class="block-heading">Gallery of Stuff</p>
 		            <div class="block-body gallery">
-						<img src="../images/170x170.gif" class="img-polaroid">
-						<img src="../images/170x170.gif" class="img-polaroid">
-						<img src="../images/170x170.gif" class="img-polaroid">
-						<img src="../images/170x170.gif" class="img-polaroid">
+						<img src="../images/W.gif" class="img-polaroid">
+						<img src="../images/W.gif" class="img-polaroid">
+						<img src="../images/W.gif" class="img-polaroid">
+						<img src="../images/W.gif" class="img-polaroid">
 		                <div class="clearfix"></div>
 		            </div>
 		        </div>
@@ -142,16 +142,16 @@
 		    <div class="block">
 		        <p class="block-heading">Gallery of Stuff</p>
 		        <div class="block-body gallery">
-					<img src="../images/140x140.gif" class="img-polaroid">
-					<img src="../images/140x140.gif" class="img-polaroid">
-					<img src="../images/140x140.gif" class="img-polaroid">
-					<img src="../images/140x140.gif" class="img-polaroid">
-					<img src="../images/140x140.gif" class="img-polaroid">
-					<img src="../images/140x140.gif" class="img-polaroid">
-					<img src="../images/140x140.gif" class="img-polaroid">
-					<img src="../images/140x140.gif" class="img-polaroid">
-					<img src="../images/140x140.gif" class="img-polaroid">
-					<img src="../images/140x140.gif" class="img-polaroid">
+					<img src="../images/XX.gif" class="img-polaroid">
+					<img src="../images/XX.gif" class="img-polaroid">
+					<img src="../images/XX.gif" class="img-polaroid">
+					<img src="../images/XX.gif" class="img-polaroid">
+					<img src="../images/XX.gif" class="img-polaroid">
+					<img src="../images/XX.gif" class="img-polaroid">
+					<img src="../images/XX.gif" class="img-polaroid">
+					<img src="../images/XX.gif" class="img-polaroid">
+					<img src="../images/XX.gif" class="img-polaroid">
+					<img src="../images/XX.gif" class="img-polaroid">
 		            <div class="clearfix"></div>
 		        </div>
 		    </div>

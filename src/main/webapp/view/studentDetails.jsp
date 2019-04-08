@@ -5,7 +5,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>学生详情</title>
+    <title>专业咨询</title>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -93,96 +93,40 @@
 					</ul>
 				</div>
 	       	</div>
-        <div class="span9">
-            <h1 class="page-title">Users</h1>
-			<div class="btn-toolbar">
-			    <button class="btn btn-primary"><i class="icon-plus"></i><a href="#addModal" data-toggle="modal"> 添加学生</a></button>
-			    <button class="btn">导入</button>
-			    <button class="btn">导出</button>
-				<div class="btn-group">
-				</div>
-			</div>
-			<div class="well">
-			    <table class="table">
-			      <thead>
-			        <tr>
-				        <th>编号</th>
-						<th>姓名</th>
-						<th>性别</th>
-						<th>电话</th>
-						<th>住址</th>
-						<th>状态</th>
-						<th>任课老师</th>
-						<th>监护人</th>
-						<th>监护人电话</th>
-						<th>入学时间</th>
-						<th>毕业时间</th>
-			          <th style="width: 26px;"></th>
-			        </tr>
-			      </thead>
-				  <tbody id="linkStudentMessage"></tbody>
-			    </table>
-			</div>
-			<div class="pagination">
-				<div id="pageLink">
-			    <!-- <ul> -->
-			        <!-- <li><a href="#">Prev</a></li>
-			        <li><a href="#">1</a></li>
-			        <li><a href="#">2</a></li>
-			        <li><a href="#">Next</a></li> -->
-			    <!-- </ul> -->
-			</div>
+		       	<h1 class="page-title">咨询</h1>
 	
-			<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			    <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-			        <h3 id="myModalLabel">Delete Confirmation</h3>
+		    <div class="row-fluid">
+			    <div class="block span4">
+			        <p class="block-heading">AAA</p>
+			        <div class="block-body gallery">
+						<img src="../images/X.gif" class="img-polaroid">
+			            <div class="clearfix"></div>
+			        </div>
 			    </div>
-			    <div class="modal-body">
-			        <p class="error-text"><i class="icon-warning-sign modal-icon"></i>Are you sure you want to delete the user?</p>
+			    <div class="block span4">
+			        <p class="block-heading">BBB</p>
+			        <div class="block-body gallery">
+						<img src="../images/W.gif" class="img-polaroid">
+			            <div class="clearfix"></div>
+			        </div>
 			    </div>
-			    <div class="modal-footer">
-			        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-			        <button class="btn btn-danger" data-dismiss="modal">Delete</button>
+			    <div class="block span4">
+			        <p class="block-heading">CCC</p>
+			        <div class="block-body gallery">
+						<img src="../images/F.png" class="img-polaroid">
+			            <div class="clearfix"></div>
+			        </div>
 			    </div>
-			</div>
-			
-			<div class="modal small hide fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
-			    <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-			        <h3 id="addModalLabel">学生信息添加</h3>
+			    <div class="block span4">
+			        <p class="block-heading">DDD</p>
+			        <div class="block-body gallery">
+						<img src="../images/H.png" class="img-polaroid">
+			            <div class="clearfix"></div>
+			        </div>
 			    </div>
-			    <div class="modal-body">
-			        <form id="tab">
-				        <label>Username</label>
-				        <input type="text" value="jsmith" class="input-xlarge">
-				        <label>First Name</label>
-				        <input type="text" value="John" class="input-xlarge">
-				        <label>Last Name</label>
-				        <input type="text" value="Smith" class="input-xlarge">
-				        <label>Email</label>
-				        <input type="text" value="jsmith@yourcompany.com" class="input-xlarge">
-				        <label>Address</label>
-				        <textarea value="Smith" rows="3" class="input-xlarge">
-							2817 S 49th
-							Apt 314
-							San Jose, CA 95101
-				        </textarea>
-				        <label>Time Zone</label>
-				        <select name="DropDownTimezone" id="DropDownTimezone" class="input-xlarge">
-					          <option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
-					          <option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
-						</select>
-					</form>
 			    </div>
-			    <div class="modal-footer">
-			        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-			        <button class="btn btn-danger" data-dismiss="modal">Delete</button>
-			    </div>
-			</div>
-		  </div>
-		</div>
-    </div>
+	       	</div>
+        </div>
     <footer>
 		<p class="pull-right">Collect from <a href="http://www.11467.com/qiye/45122272.htm" title="一容软件" target="_blank">一容软件</a></p>
         <p>&copy; 2018 <a href="https://baike.baidu.com/item/%E6%B7%B1%E5%9C%B3/140588?fr=aladdin">Shenzhen</a></p>        
@@ -190,7 +134,6 @@
   </body>
   <script type="text/javascript">
 	$(document).ready(function(){ // 页面加载完成后出现
-		page();
 		queryAll();
 	});
 	
@@ -273,30 +216,6 @@
 					}
 				}
 				$('#linkStudentMessage').append(html);
-			},
-			error: function(XMLHttpRequest, textStatus, errorThrown) {
-                alert(XMLHttpRequest.status+","+XMLHttpRequest.readyState+","+textStatus);
-            }
-		})
-	}
-	
-	function page() {
-		$.ajax({
-			type : "get",
-			url : '<%=request.getContextPath()%>/cont',
-			dataType:"json",
-			success : function(dataObj) {
-				var html = "";
-				html += "<p width='199'>当前为第${page.currentPage}页,共${page.totalPage}页</p>"+
-						"<ul><c:choose><c:when test='${page.hasPrePage}'>"+
-						"<li><a href='<%=request.getContextPath()%>/student?method=list&currentPage=1'>首页</a>"+
-						"<li><a href='<%=request.getContextPath()%>/student?method=list&currentPage=${page.currentPage - 1}'>上一页</a>"+
-						"</c:when><c:otherwise> 首页 | 上一页</c:otherwise></c:choose>"+
-						"<c:choose><c:when test='${page.hasNextPage}'>"+
-						"<li><a href='<%=request.getContextPath()%>/student?method=list&currentPage=${page.currentPage + 1}'>下一页</a>"+
-						"<li><a href='<%=request.getContextPath()%>/student?method=list&currentPage=${page.totalPage}'>尾页</a>"+
-						"</c:when><c:otherwise> 下一页 | 尾页</c:otherwise></c:choose>"
-				$('#pageLink').append(html);
 			},
 			error: function(XMLHttpRequest, textStatus, errorThrown) {
                 alert(XMLHttpRequest.status+","+XMLHttpRequest.readyState+","+textStatus);
