@@ -67,7 +67,7 @@
                     </li>
                     
                 </ul>
-                <a class="brand" href="/view/exhibition.jsp"><span class="first">School </span> <span class="second">information</span></a>
+                <a class="brand" href="/view/introduce.jsp"><span class="first">School </span> <span class="second">information</span></a>
             </div>
         </div>
     </div>
@@ -78,7 +78,6 @@
                 <div class="sidebar-nav">
 					<div class="nav-header" data-toggle="collapse" data-target="#dashboard-menu"><i class="icon-dashboard"></i>学校信息</div>
 					<ul id="dashboard-menu" class="nav nav-list collapse in">
-						<li><a href="/view/exhibition.jsp">首页</a></li>
 						<li><a href="/view/introduce.jsp">学校介绍</a></li>
 						<li><a href="/view/index.jsp">学校课程</a></li>
 						<li><a href="/view/studentDetails.jsp">专业咨询</a></li>
