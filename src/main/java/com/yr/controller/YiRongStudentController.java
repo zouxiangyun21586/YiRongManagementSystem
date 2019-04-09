@@ -25,7 +25,7 @@ public class YiRongStudentController {
 
     @RequestMapping("/index")
 	public String indexPage(ModelMap map) {
-		return "exhibition";
+		return "introduce";
 	}
     
     @ResponseBody

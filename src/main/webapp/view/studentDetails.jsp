@@ -64,7 +64,7 @@
                     </li>
                     
                 </ul>
-                <a class="brand" href="/view/exhibition.jsp"><span class="first">School </span> <span class="second">information</span></a>
+                <a class="brand" href="/view/introduce.jsp"><span class="first">School </span> <span class="second">information</span></a>
             </div>
         </div>
     </div>
@@ -75,7 +75,6 @@
                 <div class="sidebar-nav">
 					<div class="nav-header" data-toggle="collapse" data-target="#dashboard-menu"><i class="icon-dashboard"></i>学校信息</div>
 					<ul id="dashboard-menu" class="nav nav-list collapse in">
-						<li><a href="/view/exhibition.jsp">首页</a></li>
 						<li><a href="/view/introduce.jsp">学校介绍</a></li>
 						<li><a href="/view/index.jsp">学校课程</a></li>
 						<li><a href="/view/studentDetails.jsp">专业咨询</a></li>
@@ -93,40 +92,146 @@
 					</ul>
 				</div>
 	       	</div>
-		       	<h1 class="page-title">咨询</h1>
-	
-		    <div class="row-fluid">
-			    <div class="block span4">
-			        <p class="block-heading">AAA</p>
-			        <div class="block-body gallery">
-						<img src="../images/X.gif" class="img-polaroid">
-			            <div class="clearfix"></div>
-			        </div>
+	       	<div class="span9">
+		       	<div class="stats">
+				    <p class="stat"><span class="number">48</span>images</p>
+				    <p class="stat"><span class="number">4</span>galleries</p>
+				</div>
+				
+				<h1 class="page-title">老师咨询</h1>
+			    <div class="row-fluid">
+				    <div class="block span3">
+				        <p class="block-heading">钟霖军</p>
+				        <div class="block-body gallery">
+							<img src="../images/X.gif" class="img-polaroid">
+				            <div class="clearfix">中级/高级教师<br/>QQ:1234657</div>
+				        </div>
+				    </div>
+				    <div class="block span3">
+				        <p class="block-heading">林倦倦</p>
+				        <div class="block-body gallery">
+							<img src="../images/X.gif" class="img-polaroid">
+				            <div class="clearfix">初级/中级教师<br/>QQ:1234657</div>
+				        </div>
+				    </div>
 			    </div>
-			    <div class="block span4">
-			        <p class="block-heading">BBB</p>
-			        <div class="block-body gallery">
-						<img src="../images/W.gif" class="img-polaroid">
-			            <div class="clearfix"></div>
-			        </div>
+				
+				
+	       		<h1 class="page-title">学生咨询</h1>
+			    <div class="row-fluid">
+				    <div class="block span2">
+				        <p class="block-heading">熊迪坤</p>
+				        <div class="block-body gallery">
+							<img src="../images/X.gif" class="img-polaroid">
+				            <div class="clearfix">2019年3月毕业<br/>QQ:1234657</div>
+				        </div>
+				    </div>
+				    <div class="block span2">
+				        <p class="block-heading">宋春园</p>
+				        <div class="block-body gallery">
+							<img src="../images/W.gif" class="img-polaroid">
+				            <div class="clearfix">2019年3月毕业<br/>QQ:1234657</div>
+				        </div>
+				    </div>
+				    <div class="block span2">
+				        <p class="block-heading">李竝</p>
+				        <div class="block-body gallery">
+							<img src="../images/F.png" class="img-polaroid">
+				            <div class="clearfix">2019年3月毕业<br/>QQ:1234657</div>
+				        </div>
+				    </div>
+				    <div class="block span2">
+				        <p class="block-heading">唐子豪</p>
+				        <div class="block-body gallery">
+							<img src="../images/H.png" class="img-polaroid">
+				            <div class="clearfix">2017年5月入校<br/>QQ:1234657</div>
+				        </div>
+				    </div>
+				    <div class="block span2">
+				        <p class="block-heading">卢丽萍</p>
+				        <div class="block-body gallery">
+							<img src="../images/H.png" class="img-polaroid">
+				            <div class="clearfix">2017年10月入校<br/>QQ:1234657</div>
+				        </div>
+				    </div>
 			    </div>
-			    <div class="block span4">
-			        <p class="block-heading">CCC</p>
-			        <div class="block-body gallery">
-						<img src="../images/F.png" class="img-polaroid">
-			            <div class="clearfix"></div>
-			        </div>
+			    <div class="row-fluid">
+				    <div class="block span2">
+				        <p class="block-heading">周也好</p>
+				        <div class="block-body gallery">
+							<img src="../images/X.gif" class="img-polaroid">
+				            <div class="clearfix">2019年3月毕业<br/>QQ:1234657</div>
+				        </div>
+				    </div>
+				    <div class="block span2">
+				        <p class="block-heading">班整</p>
+				        <div class="block-body gallery">
+							<img src="../images/W.gif" class="img-polaroid">
+				            <div class="clearfix">2019年3月毕业<br/>QQ:1234657</div>
+				        </div>
+				    </div>
+				    <div class="block span2">
+				        <p class="block-heading">邹湘芸</p>
+				        <div class="block-body gallery">
+							<img src="../images/F.png" class="img-polaroid">
+				            <div class="clearfix">2017年6月入校<br/>QQ:1234657</div>
+				        </div>
+				    </div>
+				    <div class="block span2">
+				        <p class="block-heading">林水球</p>
+				        <div class="block-body gallery">
+							<img src="../images/H.png" class="img-polaroid">
+				            <div class="clearfix">2019年3月毕业<br/>QQ:1234657</div>
+				        </div>
+				    </div>
+				    <div class="block span2">
+				        <p class="block-heading">狄大三</p>
+				        <div class="block-body gallery">
+							<img src="../images/H.png" class="img-polaroid">
+				            <div class="clearfix">2019年3月毕业<br/>QQ:1234657</div>
+				        </div>
+				    </div>
 			    </div>
-			    <div class="block span4">
-			        <p class="block-heading">DDD</p>
-			        <div class="block-body gallery">
-						<img src="../images/H.png" class="img-polaroid">
-			            <div class="clearfix"></div>
-			        </div>
+			    <div class="row-fluid">
+				    <div class="block span2">
+				        <p class="block-heading">seismic</p>
+				        <div class="block-body gallery">
+							<img src="../images/X.gif" class="img-polaroid">
+				            <div class="clearfix">2018年6月毕业<br/>QQ:1234657</div>
+				        </div>
+				    </div>
+				    <div class="block span2">
+				        <p class="block-heading">尅德胜</p>
+				        <div class="block-body gallery">
+							<img src="../images/W.gif" class="img-polaroid">
+				            <div class="clearfix">2019年4月毕业<br/>QQ:1234657</div>
+				        </div>
+				    </div>
+				    <div class="block span2">
+				        <p class="block-heading">戴维斯</p>
+				        <div class="block-body gallery">
+							<img src="../images/F.png" class="img-polaroid">
+				            <div class="clearfix">2018年10月毕业<br/>QQ:1234657</div>
+				        </div>
+				    </div>
+				    <div class="block span2">
+				        <p class="block-heading">刘晨</p>
+				        <div class="block-body gallery">
+							<img src="../images/H.png" class="img-polaroid">
+				            <div class="clearfix">2017年10月毕业<br/>QQ:1234657</div>
+				        </div>
+				    </div>
+				    <div class="block span2">
+				        <p class="block-heading">罗霖虹</p>
+				        <div class="block-body gallery">
+							<img src="../images/H.png" class="img-polaroid">
+				            <div class="clearfix">2017年6月毕业<br/>QQ:1234657</div>
+				        </div>
+				    </div>
 			    </div>
-			    </div>
-	       	</div>
-        </div>
+		    </div>
+		</div>
+	</div>
     <footer>
 		<p class="pull-right">Collect from <a href="http://www.11467.com/qiye/45122272.htm" title="一容软件" target="_blank">一容软件</a></p>
         <p>&copy; 2018 <a href="https://baike.baidu.com/item/%E6%B7%B1%E5%9C%B3/140588?fr=aladdin">Shenzhen</a></p>        

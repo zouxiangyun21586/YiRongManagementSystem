@@ -70,41 +70,25 @@
     
     <div class="container-fluid">
         <div class="row-fluid">
-            <div class="span3">
-                <div class="sidebar-nav">
-                  <div class="nav-header" data-toggle="collapse" data-target="#dashboard-menu"><i class="icon-dashboard"></i>Dashboard</div>
-                    <ul id="dashboard-menu" class="nav nav-list collapse in">
-                        <li><a href="/view/index.jsp">Home</a></li>
-                        <li ><a href="/view/users.jsp">Sample List</a></li>
-                        <li class="active"><a href="/view/user.jsp">Sample Item</a></li>
-                        <li ><a href="gallery.html">Gallery</a></li>
-                        <li ><a href="calendar.html">Calendar</a></li>
-                        <li ><a href="faq.html">Faq</a></li>
-                        <li ><a href="help.html">Help</a></li>
-                        
-                    </ul>
-                <div class="nav-header" data-toggle="collapse" data-target="#accounts-menu"><i class="icon-briefcase"></i>Account<span class="label label-info">+10</span></div>
-                <ul id="accounts-menu" class="nav nav-list collapse in">
-                  <li ><a href="sign-in.html">Sign In</a></li>
-                  <li ><a href="sign-up.html">Sign Up</a></li>
-                  <li ><a href="reset-password.html">Reset Password</a></li>
-                </ul>
-
-                <div class="nav-header" data-toggle="collapse" data-target="#settings-menu"><i class="icon-exclamation-sign"></i>Error Pages</div>
-                <ul id="settings-menu" class="nav nav-list collapse in">
-                  <li ><a href="403.html">403 page</a></li>
-                  <li ><a href="404.html">404 page</a></li>
-                  <li ><a href="500.html">500 page</a></li>
-                  <li ><a href="503.html">503 page</a></li>
-                </ul>
-
-                <div class="nav-header" data-toggle="collapse" data-target="#legal-menu"><i class="icon-legal"></i>Legal</div>
-                <ul id="legal-menu" class="nav nav-list collapse in">
-                  <li ><a href="privacy-policy.html">Privacy Policy</a></li>
-                  <li ><a href="terms-and-conditions.html">Terms and Conditions</a></li>
-                </ul>
-            </div>
-        </div>
+            <div class="sidebar-nav">
+					<div class="nav-header" data-toggle="collapse" data-target="#dashboard-menu"><i class="icon-dashboard"></i>学校信息</div>
+					<ul id="dashboard-menu" class="nav nav-list collapse in">
+						<li><a href="/view/introduce.jsp">学校介绍</a></li>
+						<li><a href="/view/index.jsp">学校课程</a></li>
+						<li><a href="/view/studentDetails.jsp">专业咨询</a></li>
+						<li><a href="/view/certificate.jsp">资质证书</a></li>
+					</ul>
+					<div class="nav-header" data-toggle="collapse" data-target="#accounts-menu"><i class="icon-briefcase"></i>学生信息</div>
+					<ul id="accounts-menu" class="nav nav-list collapse in">
+						<li><a href="/view/studentDetails.jsp">学生详情</a></li>
+						<li><a href="/view/InSchool.jsp">在校学生</a></li>
+						<li><a href="/view/graduation.jsp">毕业学生</a></li>
+					</ul>
+					<div class="nav-header" data-toggle="collapse" data-target="#settings-menu"><i class="icon-legal"></i>教师信息</div>
+					<ul id="settings-menu" class="nav nav-list collapse in">
+						<li ><a href="*">教师详情</a></li>
+					</ul>
+				</div>
         <div class="span9">
             <h1 class="page-title">编辑学生信息</h1>
 <div class="btn-toolbar">
@@ -182,7 +166,7 @@ San Jose, CA 95101
       </div>
   </div>
 </div>
-
+</div>
 <div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Ã</button>

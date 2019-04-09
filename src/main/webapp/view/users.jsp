@@ -64,7 +64,7 @@
                     </li>
                     
                 </ul>
-                <a class="brand" href="/view/exhibition.jsp"><span class="first">School </span> <span class="second">information</span></a>
+                <a class="brand" href="/view/introduce.jsp"><span class="first">School </span> <span class="second">information</span></a>
             </div>
         </div>
     </div>
